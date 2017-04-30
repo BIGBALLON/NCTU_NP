@@ -1,0 +1,20 @@
+login1
+login2
+1:removetag test.html | number | cat >2
+1:ls | number > ls.txt
+2:ls >3
+login3
+3:cat <2
+2:cat <1 >3
+login4
+3:cat <2 >4
+login5
+4:cat >5 <3
+5:cat <4 |1
+5:cat
+logout5
+logout4
+logout3
+logout2
+logout1
+exit

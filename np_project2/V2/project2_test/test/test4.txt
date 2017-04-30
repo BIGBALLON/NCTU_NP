@@ -1,0 +1,35 @@
+login1
+login2
+login3
+login4
+1:name Egglet
+2:name FruitBuffet
+3:name GingerCookies
+4:name HotCakes
+1:number test.html >2
+1:cat test.html >3
+1:cat test.html | cat >3
+1:cat test.html >6
+2:number <1
+2:cat test.html >3
+2:number <4
+3:number <2
+3:ls >4
+2:number test.html >5
+3:number <2
+4:removetag test.html >1
+4:number <3
+4:cat <3
+3:cat <1
+1:number <5
+logout1
+login5
+5:name IceCream
+5:who
+5:cat <4
+5:number test.html >3
+logout2
+logout3
+logout4
+logout5
+exit

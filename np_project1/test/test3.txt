@@ -1,0 +1,7 @@
+removetag test.html |5
+ls | number > ls.txt
+removetag0 test.html |1
+number | number |2
+cat ls.txt |1
+number
+exit

@@ -1,0 +1,33 @@
+login1
+1:who
+login2
+2:name user2
+2:who
+1:who
+1:name user2
+1:name user11
+1:name user111
+login3
+3:who
+3:name user11
+3:who
+3:name user3
+3:who
+1:cat test.html |1
+1:cat | removetag |1
+2:removetag test.html | noop | number | number | number |1
+1:number > test1.txt
+1:cat test1.txt | number > test2.txt
+1:cat test2.txt
+2:cat
+logout1
+logout2
+3:removetag0 test.html | number
+3:ls | cat |3
+3:noop
+3:ccccc
+3:cat
+3:number test.html > baozi
+3:cat baozi
+logout3
+exit

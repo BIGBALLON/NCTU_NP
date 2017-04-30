@@ -1,0 +1,13 @@
+cat test.html
+cat test.html | removetag
+number test.html > test1.txt
+cat test1.txt | number > test2.txt
+noop
+noop
+noop
+noop
+noop
+noop
+cat test1.txt
+cat test2.txt
+exit

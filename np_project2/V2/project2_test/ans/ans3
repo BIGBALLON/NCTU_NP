@@ -1,0 +1,138 @@
+
+login1
+1| ****************************************
+1| ** Welcome to the information server. **
+1| ****************************************
+1| *** User '(no name)' entered from CGILAB/511. ***
+1| % 
+
+login2
+1| *** User '(no name)' entered from CGILAB/511. ***
+2| ****************************************
+2| ** Welcome to the information server. **
+2| ****************************************
+2| *** User '(no name)' entered from CGILAB/511. ***
+2| % 
+
+login3
+1| *** User '(no name)' entered from CGILAB/511. ***
+2| *** User '(no name)' entered from CGILAB/511. ***
+3| ****************************************
+3| ** Welcome to the information server. **
+3| ****************************************
+3| *** User '(no name)' entered from CGILAB/511. ***
+3| % 
+
+1 % name ApplePie
+1| *** User from CGILAB/511 is named 'ApplePie'. ***
+1| % 
+2| *** User from CGILAB/511 is named 'ApplePie'. ***
+3| *** User from CGILAB/511 is named 'ApplePie'. ***
+
+2 % name BakedCake
+1| *** User from CGILAB/511 is named 'BakedCake'. ***
+2| *** User from CGILAB/511 is named 'BakedCake'. ***
+2| % 
+3| *** User from CGILAB/511 is named 'BakedCake'. ***
+
+2 % who
+2| <ID>	<nickname>	<IP/port>	<indicate me>
+2| 1	ApplePie	CGILAB/511
+2| 2	BakedCake	CGILAB/511	<-me
+2| 3	(no name)	CGILAB/511
+2| % 
+
+logout1
+1| *** User 'ApplePie' left. ***
+2| *** User 'ApplePie' left. ***
+3| *** User 'ApplePie' left. ***
+
+3 % name Cream
+2| *** User from CGILAB/511 is named 'Cream'. ***
+3| *** User from CGILAB/511 is named 'Cream'. ***
+3| % 
+
+login4
+2| *** User '(no name)' entered from CGILAB/511. ***
+3| *** User '(no name)' entered from CGILAB/511. ***
+4| ****************************************
+4| ** Welcome to the information server. **
+4| ****************************************
+4| *** User '(no name)' entered from CGILAB/511. ***
+4| % 
+
+3 % who
+3| <ID>	<nickname>	<IP/port>	<indicate me>
+3| 1	(no name)	CGILAB/511
+3| 2	BakedCake	CGILAB/511
+3| 3	Cream	CGILAB/511	<-me
+3| % 
+
+4 % name Donut
+2| *** User from CGILAB/511 is named 'Donut'. ***
+3| *** User from CGILAB/511 is named 'Donut'. ***
+4| *** User from CGILAB/511 is named 'Donut'. ***
+4| % 
+
+2 % who
+2| <ID>	<nickname>	<IP/port>	<indicate me>
+2| 1	Donut	CGILAB/511
+2| 2	BakedCake	CGILAB/511	<-me
+2| 3	Cream	CGILAB/511
+2| % 
+
+2 % yell I am hungry.
+2| *** BakedCake yelled ***: I am hungry.
+2| % 
+3| *** BakedCake yelled ***: I am hungry.
+4| *** BakedCake yelled ***: I am hungry.
+
+3 % yell Me too.
+2| *** Cream yelled ***: Me too.
+3| *** Cream yelled ***: Me too.
+3| % 
+4| *** Cream yelled ***: Me too.
+
+2 % tell 3 What do you want to eat? 
+2| % 
+3| *** BakedCake told you ***: What do you want to eat? 
+
+2 % tell 5 Donut?
+2| *** Error: user #5 does not exist yet. ***
+2| % 
+
+2 % tell 3 Donut?
+2| % 
+3| *** BakedCake told you ***: Donut?
+
+3 % tell 2 Sound good.
+2| *** Cream told you ***: Sound good.
+3| % 
+
+4 % tell 2 Don't eat me.
+2| *** Donut told you ***: Don't eat me.
+4| % 
+
+4 % yell ls > test1.html
+2| *** Donut yelled ***: ls > test1.html
+3| *** Donut yelled ***: ls > test1.html
+4| *** Donut yelled ***: ls > test1.html
+4| % 
+
+4 % tell 6 ls > test1.html
+4| *** Error: user #6 does not exist yet. ***
+4| % 
+
+logout2
+2| *** User 'BakedCake' left. ***
+3| *** User 'BakedCake' left. ***
+4| *** User 'BakedCake' left. ***
+
+logout3
+3| *** User 'Cream' left. ***
+4| *** User 'Cream' left. ***
+
+logout4
+4| *** User 'Donut' left. ***
+
+exit

@@ -1,0 +1,38 @@
+removetag test.html |1
+abc
+ls |1
+ls |1
+ls |3
+removetag test.html |2
+removetag0 test.html !1
+number > demo3_out1.txt
+number test.html |1
+number |2
+ls bin |2
+cat |2
+number |2
+cat |2
+number |1
+cat > demo3_out2.txt
+cat demo3_out1.txt |2
+cat demo3_out2.txt |2
+cat |4
+cat |4
+noop
+noop
+cat |3
+cat |3
+noop
+cat |2
+cat |1
+number > demo3_out3.txt
+noop
+noop
+noop
+noop
+noop
+noop
+noop
+noop
+cat demo3_out3.txt | cat
+exit

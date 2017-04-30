@@ -1,0 +1,210 @@
+
+login1
+1| ****************************************
+1| ** Welcome to the information server. **
+1| ****************************************
+1| *** User '(no name)' entered from CGILAB/511. ***
+1| % 
+
+login2
+1| *** User '(no name)' entered from CGILAB/511. ***
+2| ****************************************
+2| ** Welcome to the information server. **
+2| ****************************************
+2| *** User '(no name)' entered from CGILAB/511. ***
+2| % 
+
+login3
+1| *** User '(no name)' entered from CGILAB/511. ***
+2| *** User '(no name)' entered from CGILAB/511. ***
+3| ****************************************
+3| ** Welcome to the information server. **
+3| ****************************************
+3| *** User '(no name)' entered from CGILAB/511. ***
+3| % 
+
+1 % name JellyBeans
+1| *** User from CGILAB/511 is named 'JellyBeans'. ***
+1| % 
+2| *** User from CGILAB/511 is named 'JellyBeans'. ***
+3| *** User from CGILAB/511 is named 'JellyBeans'. ***
+
+2 % name Kakigori
+1| *** User from CGILAB/511 is named 'Kakigori'. ***
+2| *** User from CGILAB/511 is named 'Kakigori'. ***
+2| % 
+3| *** User from CGILAB/511 is named 'Kakigori'. ***
+
+3 % name LemonPie
+1| *** User from CGILAB/511 is named 'LemonPie'. ***
+2| *** User from CGILAB/511 is named 'LemonPie'. ***
+3| *** User from CGILAB/511 is named 'LemonPie'. ***
+3| % 
+
+1 % removetag0 test.html | cat | number | cat >2
+1| Error: illegal tag "!test.html"
+1| *** JellyBeans (#1) just piped 'removetag0 test.html | cat | number | cat >2' to Kakigori (#2) ***
+1| % 
+2| *** JellyBeans (#1) just piped 'removetag0 test.html | cat | number | cat >2' to Kakigori (#2) ***
+3| *** JellyBeans (#1) just piped 'removetag0 test.html | cat | number | cat >2' to Kakigori (#2) ***
+
+2 % cat <1 | number >1
+1| *** Kakigori (#2) just received from JellyBeans (#1) by 'cat <1 | number >1' ***
+1| *** Kakigori (#2) just piped 'cat <1 | number >1' to JellyBeans (#1) ***
+2| *** Kakigori (#2) just received from JellyBeans (#1) by 'cat <1 | number >1' ***
+2| *** Kakigori (#2) just piped 'cat <1 | number >1' to JellyBeans (#1) ***
+2| % 
+3| *** Kakigori (#2) just received from JellyBeans (#1) by 'cat <1 | number >1' ***
+3| *** Kakigori (#2) just piped 'cat <1 | number >1' to JellyBeans (#1) ***
+
+1 % cat <2 | removetag0 | number >2
+1| *** JellyBeans (#1) just received from Kakigori (#2) by 'cat <2 | removetag0 | number >2' ***
+1| *** JellyBeans (#1) just piped 'cat <2 | removetag0 | number >2' to Kakigori (#2) ***
+1| % 
+2| *** JellyBeans (#1) just received from Kakigori (#2) by 'cat <2 | removetag0 | number >2' ***
+2| *** JellyBeans (#1) just piped 'cat <2 | removetag0 | number >2' to Kakigori (#2) ***
+3| *** JellyBeans (#1) just received from Kakigori (#2) by 'cat <2 | removetag0 | number >2' ***
+3| *** JellyBeans (#1) just piped 'cat <2 | removetag0 | number >2' to Kakigori (#2) ***
+
+1 % yell Let's gooooooo!
+1| *** JellyBeans yelled ***: Let's gooooooo!
+1| % 
+2| *** JellyBeans yelled ***: Let's gooooooo!
+3| *** JellyBeans yelled ***: Let's gooooooo!
+
+2 % number <1 >3
+1| *** Kakigori (#2) just received from JellyBeans (#1) by 'number <1 >3' ***
+1| *** Kakigori (#2) just piped 'number <1 >3' to LemonPie (#3) ***
+2| *** Kakigori (#2) just received from JellyBeans (#1) by 'number <1 >3' ***
+2| *** Kakigori (#2) just piped 'number <1 >3' to LemonPie (#3) ***
+2| % 
+3| *** Kakigori (#2) just received from JellyBeans (#1) by 'number <1 >3' ***
+3| *** Kakigori (#2) just piped 'number <1 >3' to LemonPie (#3) ***
+
+3 % number <2 >1
+1| *** LemonPie (#3) just received from Kakigori (#2) by 'number <2 >1' ***
+1| *** LemonPie (#3) just piped 'number <2 >1' to JellyBeans (#1) ***
+2| *** LemonPie (#3) just received from Kakigori (#2) by 'number <2 >1' ***
+2| *** LemonPie (#3) just piped 'number <2 >1' to JellyBeans (#1) ***
+3| *** LemonPie (#3) just received from Kakigori (#2) by 'number <2 >1' ***
+3| *** LemonPie (#3) just piped 'number <2 >1' to JellyBeans (#1) ***
+3| % 
+
+1 % number <3 >2
+1| *** JellyBeans (#1) just received from LemonPie (#3) by 'number <3 >2' ***
+1| *** JellyBeans (#1) just piped 'number <3 >2' to Kakigori (#2) ***
+1| % 
+2| *** JellyBeans (#1) just received from LemonPie (#3) by 'number <3 >2' ***
+2| *** JellyBeans (#1) just piped 'number <3 >2' to Kakigori (#2) ***
+3| *** JellyBeans (#1) just received from LemonPie (#3) by 'number <3 >2' ***
+3| *** JellyBeans (#1) just piped 'number <3 >2' to Kakigori (#2) ***
+
+2 % number <1 >3
+1| *** Kakigori (#2) just received from JellyBeans (#1) by 'number <1 >3' ***
+1| *** Kakigori (#2) just piped 'number <1 >3' to LemonPie (#3) ***
+2| *** Kakigori (#2) just received from JellyBeans (#1) by 'number <1 >3' ***
+2| *** Kakigori (#2) just piped 'number <1 >3' to LemonPie (#3) ***
+2| % 
+3| *** Kakigori (#2) just received from JellyBeans (#1) by 'number <1 >3' ***
+3| *** Kakigori (#2) just piped 'number <1 >3' to LemonPie (#3) ***
+
+3 % number <2 >1
+1| *** LemonPie (#3) just received from Kakigori (#2) by 'number <2 >1' ***
+1| *** LemonPie (#3) just piped 'number <2 >1' to JellyBeans (#1) ***
+2| *** LemonPie (#3) just received from Kakigori (#2) by 'number <2 >1' ***
+2| *** LemonPie (#3) just piped 'number <2 >1' to JellyBeans (#1) ***
+3| *** LemonPie (#3) just received from Kakigori (#2) by 'number <2 >1' ***
+3| *** LemonPie (#3) just piped 'number <2 >1' to JellyBeans (#1) ***
+3| % 
+
+1 % number <3 >2
+1| *** JellyBeans (#1) just received from LemonPie (#3) by 'number <3 >2' ***
+1| *** JellyBeans (#1) just piped 'number <3 >2' to Kakigori (#2) ***
+1| % 
+2| *** JellyBeans (#1) just received from LemonPie (#3) by 'number <3 >2' ***
+2| *** JellyBeans (#1) just piped 'number <3 >2' to Kakigori (#2) ***
+3| *** JellyBeans (#1) just received from LemonPie (#3) by 'number <3 >2' ***
+3| *** JellyBeans (#1) just piped 'number <3 >2' to Kakigori (#2) ***
+
+2 % number <1 >3
+1| *** Kakigori (#2) just received from JellyBeans (#1) by 'number <1 >3' ***
+1| *** Kakigori (#2) just piped 'number <1 >3' to LemonPie (#3) ***
+2| *** Kakigori (#2) just received from JellyBeans (#1) by 'number <1 >3' ***
+2| *** Kakigori (#2) just piped 'number <1 >3' to LemonPie (#3) ***
+2| % 
+3| *** Kakigori (#2) just received from JellyBeans (#1) by 'number <1 >3' ***
+3| *** Kakigori (#2) just piped 'number <1 >3' to LemonPie (#3) ***
+
+3 % number <2 >1
+1| *** LemonPie (#3) just received from Kakigori (#2) by 'number <2 >1' ***
+1| *** LemonPie (#3) just piped 'number <2 >1' to JellyBeans (#1) ***
+2| *** LemonPie (#3) just received from Kakigori (#2) by 'number <2 >1' ***
+2| *** LemonPie (#3) just piped 'number <2 >1' to JellyBeans (#1) ***
+3| *** LemonPie (#3) just received from Kakigori (#2) by 'number <2 >1' ***
+3| *** LemonPie (#3) just piped 'number <2 >1' to JellyBeans (#1) ***
+3| % 
+
+1 % number <3 >2
+1| *** JellyBeans (#1) just received from LemonPie (#3) by 'number <3 >2' ***
+1| *** JellyBeans (#1) just piped 'number <3 >2' to Kakigori (#2) ***
+1| % 
+2| *** JellyBeans (#1) just received from LemonPie (#3) by 'number <3 >2' ***
+2| *** JellyBeans (#1) just piped 'number <3 >2' to Kakigori (#2) ***
+3| *** JellyBeans (#1) just received from LemonPie (#3) by 'number <3 >2' ***
+3| *** JellyBeans (#1) just piped 'number <3 >2' to Kakigori (#2) ***
+
+2 % number <1 >3
+1| *** Kakigori (#2) just received from JellyBeans (#1) by 'number <1 >3' ***
+1| *** Kakigori (#2) just piped 'number <1 >3' to LemonPie (#3) ***
+2| *** Kakigori (#2) just received from JellyBeans (#1) by 'number <1 >3' ***
+2| *** Kakigori (#2) just piped 'number <1 >3' to LemonPie (#3) ***
+2| % 
+3| *** Kakigori (#2) just received from JellyBeans (#1) by 'number <1 >3' ***
+3| *** Kakigori (#2) just piped 'number <1 >3' to LemonPie (#3) ***
+
+3 % number <2 >1
+1| *** LemonPie (#3) just received from Kakigori (#2) by 'number <2 >1' ***
+1| *** LemonPie (#3) just piped 'number <2 >1' to JellyBeans (#1) ***
+2| *** LemonPie (#3) just received from Kakigori (#2) by 'number <2 >1' ***
+2| *** LemonPie (#3) just piped 'number <2 >1' to JellyBeans (#1) ***
+3| *** LemonPie (#3) just received from Kakigori (#2) by 'number <2 >1' ***
+3| *** LemonPie (#3) just piped 'number <2 >1' to JellyBeans (#1) ***
+3| % 
+
+1 % number <3 | number | number
+1| *** JellyBeans (#1) just received from LemonPie (#3) by 'number <3 | number | number' ***
+1|    1    1    1    1    1    1    1    1    1    1    1    1    1    1    1    1    1 
+1|    2    2    2    2    2    2    2    2    2    2    2    2    2    2    2    2    2 Test
+1|    3    3    3    3    3    3    3    3    3    3    3    3    3    3    3    3    3 This is a test program
+1|    4    4    4    4    4    4    4    4    4    4    4    4    4    4    4    4    4 for ras.
+1|    5    5    5    5    5    5    5    5    5    5    5    5    5    5    5    5    5 
+1| % 
+2| *** JellyBeans (#1) just received from LemonPie (#3) by 'number <3 | number | number' ***
+3| *** JellyBeans (#1) just received from LemonPie (#3) by 'number <3 | number | number' ***
+
+1 % yell Test over!
+1| *** JellyBeans yelled ***: Test over!
+1| % 
+2| *** JellyBeans yelled ***: Test over!
+3| *** JellyBeans yelled ***: Test over!
+
+1 % who
+1| <ID>	<nickname>	<IP/port>	<indicate me>
+1| 1	JellyBeans	CGILAB/511	<-me
+1| 2	Kakigori	CGILAB/511
+1| 3	LemonPie	CGILAB/511
+1| % 
+
+logout1
+1| *** User 'JellyBeans' left. ***
+2| *** User 'JellyBeans' left. ***
+3| *** User 'JellyBeans' left. ***
+
+logout2
+2| *** User 'Kakigori' left. ***
+3| *** User 'Kakigori' left. ***
+
+logout3
+3| *** User 'LemonPie' left. ***
+
+exit

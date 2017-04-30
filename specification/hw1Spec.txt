@@ -1,0 +1,130 @@
+If there is any different between hw1.txt and hw1Spec.txt, please follow the rule in hw1Spec.txt.
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+Input spec:
+
+1.	The length of a single-line input will not exceed 15000 characters.
+	There may be huge number of commands in a single-line input.
+	Each command will not exceed 256 characters.
+
+2.	There must be one or more spaces between commands and symbols (or arguments.), 
+	but no spaces between pipe and numbers.
+
+	eg. cat hello.txt | number
+		cat hello.txt |4
+
+3.	There will not be any '/' character in demo input.
+
+4.	Pipe ("|") will not come with "printenv" and "setenv".
+
+5.	Use '% ' as the command line prompt.
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+About server:
+
+1.	The welcome message MUST been shown as follows:
+****************************************
+** Welcome to the information server. **
+****************************************
+
+2.	Close the connection between the server and the client immediately when the server recieve "exit".
+
+3.	Note that the forked process of server MUST be killed when the connection to the client is closed.
+	Otherwise, there may be lots zombie processes.
+	
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+About a numbered-pipe
+
+1.	|N means the stdout of last command should be piped to the first command of next Nth line, where 1 <= N <= 1000.
+
+2.	!N means both stdout and stderr of last command should be piped to the first command of next Nth line, where 1 <= N <= 1000.
+
+3.	If there is any error in a input line, the line number still counts.
+
+	eg. cat hello.txt |2
+		ctt					<= unknown command, but the line number still counts
+		number
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+About parsing:
+
+1.	If there is command not found, print as follow:s
+Unknown command: [command].
+
+e.g. 	% ctt
+		Unknown command: [ctt].
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+Other proposed:
+
+1.	There must be "ls", "cat", "removetag", "removetag0", "number" in "bin/" of "ras/".
+
+2.	You have to execute the files in "bin/" with an "exec()"-based function.(eg. execvp() or execlp() ...)
+
+3.	Two of the commands (ls and cat) used in the homework are placed in the folder /bin.
+	Please copy them in the folder ~/ras/bin/.
+	(Example: cp /bin/ls /bin/cat ~/ras/bin/)
+	
+4.	Other commands, such as noop, number, removetag and remoetag0 are all packaged in the commands.rar.
+	Please compile them by yourself and put the executable file into folder ~/ras/bin/.
+	(Compile example: g++ noop.cpp -o ~/ras/bin/noop)
+	
+5.	After completing the server , you can test how it works by using telnet.
+	(Command: telnet nplinux1.cs.nctu.edu.tw [port])
+	By the way, if the OS of your computer is Win7, the telnet is closed in default, you can follow this link to open it:
+	http://goo.gl/kd51Sa
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+About submit format:
+(Please follow the format to submit the project, or you won't get full score in the project.)
+
+1.	create a directory named your student ID, put all your code in the same directory layer
+
+2.	zip the directory (Attention!! we only accept .zip format), upload the .zip to the E3 platform
+
+e.g.
+	create a directory 0356169, in that directory may have
+
+	/0356169/server.cpp
+	/0356169/socket.cpp
+	...
+	
+	zip it and get 0356169.zip, finally upload 0356169.zip to E3
+
+	The most important announcement is that we take plagiarism very seriously.
+	All projects will be checked for plagiarism.
+	Any cases that have been discovered will be reported to the instructors and will get zero on this project.
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+About server:
+(Choose your server according to the last digit of your student ID)
+
+server						the last digit
+npbsd0.cs.nctu.edu.tw			0
+npbsd1.cs.nctu.edu.tw			1
+npbsd2.cs.nctu.edu.tw			2
+npbsd3.cs.nctu.edu.tw			3
+npbsd4.cs.nctu.edu.tw			4
+nplinux0.cs.nctu.edu.tw			5
+nplinux1.cs.nctu.edu.tw			6
+nplinux2.cs.nctu.edu.tw			7
+nplinux3.cs.nctu.edu.tw			8
+nplinux4.cs.nctu.edu.tw			9
+
+e.g.	0356169 use nplinux4.cs.nctu.edu.tw
+(If you do not have a workstation account, you need to visit the website: https://www.cs.nctu.edu.tw/cscc/account/ and apply for a workstation account at the computer center of CSIE deparment.)
+
+If your server have any problem, please choose another server with less user.
+(Command: who -q)
+
+Note:
+
+1.	Any abuse of system will be recorded.
+
+2.	NP project should be run on NP server, or your account will be locked.
+
+3.	Be sure to clean zombie process.
+	(Command: ps aux | less)
+
+4.	Don't attack other student's program!
+

@@ -1,0 +1,115 @@
+﻿注意事項：
+本次作業分成3個部分
+
+part1. CGI
+
+這個部分可以使用np機器上的apache server先來測試
+將cgi檔案放在各位的系上np工作站 ~/public_html 底下 
+並且將檔案權限設成755
+chmod 755  hello.cgi
+ex:        ~yourAccount/public_html/hello.cgi
+
+
+	然後在browswer 輸入  http://nplinuxN.cs.nctu.edu.tw/~yourAccount/hello.cgi
+	就能執行hello.cgi，這裡的yourAccount不是你的學號，是你的登入名稱。
+
+
+ex. 	yourAccount = hcwu0828, server = nplinux2
+	->http://nplinux2.cs.nctu.edu.tw/~hcwu0828/hello.cgi
+
+
+          
+
+至於你們寫的hw3.cgi要用form_get.html的send來執行
+先在browser輸入http://nplinuxN.cs.nctu.edu.tw/~yourAccount/form_get.html
+再填好相關的變數,之後測試
+
+測試文件要和你的CGI放在同一目錄
+請務必將delayedremovetag.cpp 編譯成delayedremovetag放在ras和rwg的bin目錄下面
+
+Output需要包含測資的內容，並請用<b></b>把測資的內容包起來。
+ex:	<script>document.all['m1'].innerHTML += "% <b>removetag test.html</b><br>";</script>
+
+要在html裡面顯示>或<，需要將>換成&lt;<換成&gt;，參考http://www.web2generators.com/html/entities
+
+程式沒有做到nonblocking會被扣很多分數，
+在你cgi連到的其中一個ras在一段時間之內沒有反應時，其他連線要可以正常工作（不會因此全部卡在那邊）。
+做法請參考HTTP_ConcurrentClient.pdf
+
+part2. HTTP SERVER
+
+先寫好一個http server,  執行並bind一個port
+之後你執行的網址前面就會是
+http://nplinuxN.cs.nctu.edu.tw:port/
+
+可先用hello.cgi測試
+ex:  把server開在nplinux1上 port為5566
+        http://nplinux1.cs.nctu.edu.tw:5566/hellow.cgi
+
+要測hw3.cgi一樣是經由form_get.html
+先在browser輸入http://npbsd1.cs.nctu.edu.tw:5566/form_get.html
+再填好相關的變數後進行測試
+
+不可以用其他Opensource的HTTP Server來做Part2，請自己實作，這部分你要做的主要是兩件事：
+1.處理來自browser的連線，parse browser發來的request，然後set enviroment variable讓cgi可以用
+2.把cgi叫起來，把cgi的結果傳回browser。
+建議先從怎樣parse browser的request入手。
+
+part3. winsock
+
+我們提供的框架是在visual studio上編譯好的prjoect
+可用2008 sp1以上的版本來執行
+此部分的cgi和http server是寫在一起的
+相關的內容請參考winsock.pdf
+
+nonblocking是通過WASAsyncSelect來完成，
+用這個API你的Socket就可以做到nonblocking的效果，
+然後再在對應的event裡面實作對應的動作就好，
+因為這部分將httpd和cgi結合在一起。
+所以你的程式既是Server（對於browser來說）也是client（對於你的RAS/RWG來說），
+所以除了WM_SOCKET_NOTIFY之外你會需要定義另一個Message來處理不同的event。
+沒有用WASAsyncSelect的話，winsock這部分將是0分。
+
+==============================================================================================
+
+Demo時間： 2016.12.11
+
+本次作業linux和windows各35分，Demo時的現場改code佔30分，
+如果只做出來linux或windows其一仍然可以來de，剩下那部分的分數期末補de打折。
+
+請務必記得使用git來做版本控制，沒有使用或是沒有commit紀錄的要扣30分。
+
+我們給大家的CGI是用Perl寫的，同學可以用這些CGI來測試你們的HTTP Server(part2)。
+但是這次作業，以及所有NP作業都應該使用C/C++來實作。
+
+請同學在12.11之前上傳檔案到E3，
+
+==============================================================================================
+
+特別注意:
+
+請不要上傳測試資料及助教提供的cgi,delayedremovetag等.cpp，並且不要上傳任何版本控制的檔案 (如 .git*)
+winsock只需上傳自己的程式碼即可，不需要visual studio專案檔，
+請將所有程式碼壓縮成zip檔上傳
+
+若不符合上述規定將會斟酌扣分 (-3 ~ -10)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

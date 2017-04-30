@@ -1,0 +1,9 @@
+printenv PATH
+ls
+setenv PATH .
+printenv PATH
+ls
+setenv PATH bin
+ls -al bin
+date
+exit

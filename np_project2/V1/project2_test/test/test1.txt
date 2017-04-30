@@ -1,0 +1,19 @@
+login1
+login2
+1:printenv PATH
+1:setenv PATH .
+1:printenv PATH
+2:printenv PATH
+2:ls | number |2
+2:cat test.html |1
+1:ls | number
+2:cat
+1:setenv PATH bin
+1:printenv PATH
+1:ls > ls.txt
+1:cat ls.txt
+2:removetag test.html | number
+1:number test.html | removetag
+logout1
+logout2
+exit
